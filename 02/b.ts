@@ -54,7 +54,7 @@ const game = (a: Shape, b: Round) => {
 };
 
 const result = lines.reduce((acc, line) => {
-  const [a, b]: [Shape, Round] = line.split(" ");
+  const [a, b] = line.split(" ") as [Shape, Round];
   return acc + game(a, b);
 }, 0);
 
