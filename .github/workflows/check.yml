@@ -23,6 +23,9 @@ jobs:
         with:
           deno-version: ${{ matrix.deno }}
 
+      - name: Version
+        run: deno --version
+
       - name: Format
         run: npm run format:check
 
