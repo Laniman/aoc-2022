@@ -11,7 +11,7 @@
     "lint": "deno lint",
     "format": "deno fmt --ignore=node_modules",
     "format:check": "deno fmt --ignore=node_modules --check",
-    "test": "deno test --allow-read **/{a,b}.ts",
+    "test": "deno test --allow-read **/*.ts",
     "test:watch": "deno test --allow-read --watch **/{a,b}.ts"
   },
   "engines": {
