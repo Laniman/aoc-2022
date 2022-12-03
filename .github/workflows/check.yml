@@ -26,11 +26,11 @@ jobs:
       - name: Version
         run: deno --version
 
-      - name: Format
-        run: npm run format:check
-
       - name: Lint
         run: npm run lint
+
+      - name: Format
+        run: npm run format:check
 
       - name: Test
         run: npm run test
