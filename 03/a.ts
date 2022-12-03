@@ -27,25 +27,15 @@ function solution(input: string) {
 }
 
 Deno.test("example", () => {
-  const input =
-    "vJrwpWtwJgWrhcsFMMfFFhFp\n" +
-    "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL\n" +
-    "PmmdzqPrVvPwwTWBwg\n" +
-    "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn\n" +
-    "ttgJtRGJQctTZtZT\n" +
-    "CrZsJsPPZsGzwwsLwLmpwMDw";
-
+  const input = Deno.readTextFileSync("./03/example.txt");
   const actual = solution(input);
   const expected = 157;
-
   assertEquals(actual, expected);
 });
 
 Deno.test("puzzle input", { ignore: false }, () => {
   const input = Deno.readTextFileSync("./03/input.txt");
-
   const actual = solution(input);
   const expected = 7831;
-
   assertEquals(actual, expected);
 });

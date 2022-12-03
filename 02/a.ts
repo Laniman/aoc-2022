@@ -1,8 +1,4 @@
-Deno.chdir("./02");
-
-const input = await Deno.readTextFile("./input.txt");
-
-const lines = input.split("\n");
+import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
 
 type ShapeA = "A" | "B" | "C";
 type ShapeB = "X" | "Y" | "Z";
@@ -54,9 +50,27 @@ const game = (a: ShapeA, b: ShapeB) => {
   return scoreRound(round) + scoreShape(b);
 };
 
-const result = lines.reduce((acc, line) => {
-  const [a, b] = line.split(" ") as [ShapeA, ShapeB];
-  return acc + game(a, b);
-}, 0);
+function solution(input: string) {
+  const lines = input.split("\n");
 
-console.log(result);
+  const result = lines.reduce((acc, line) => {
+    const [a, b] = line.split(" ") as [ShapeA, ShapeB];
+    return acc + game(a, b);
+  }, 0);
+
+  return result;
+}
+
+Deno.test("example", () => {
+  const input = Deno.readTextFileSync("./02/example.txt");
+  const actual = solution(input);
+  const expected = 15;
+  assertEquals(actual, expected);
+});
+
+Deno.test("puzzle input", { ignore: false }, () => {
+  const input = Deno.readTextFileSync("./02/input.txt");
+  const actual = solution(input);
+  const expected = 11906;
+  assertEquals(actual, expected);
+});
