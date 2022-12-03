@@ -16,6 +16,11 @@ jobs:
         deno: [1.x]
 
     steps:
+      - name: Set git to use LF
+        run: |
+          git config --system core.autocrlf false
+          git config --system core.eol lf
+
       - uses: actions/checkout@v3
 
       - name: Setup Deno
@@ -26,11 +31,11 @@ jobs:
       - name: Version
         run: deno --version
 
-      - name: Lint
-        run: npm run lint
-
       - name: Format
         run: npm run format:check
+
+      - name: Lint
+        run: npm run lint
 
       - name: Test
         run: npm run test
