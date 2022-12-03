@@ -19,7 +19,7 @@ function solution(input: string) {
 
       return [acc, chunk];
     },
-    [[], []]
+    [[], []],
   );
 
   const result = chunked
@@ -40,7 +40,7 @@ function solution(input: string) {
 }
 
 Deno.test("example", () => {
-    const input = Deno.readTextFileSync("./03/example.txt");
+  const input = Deno.readTextFileSync("./03/example.txt");
   const actual = solution(input);
   const expected = 70;
   assertEquals(actual, expected);
