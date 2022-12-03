@@ -17,6 +17,7 @@ jobs:
 
     steps:
       - name: Set git to use LF
+        if: runner.os == 'Windows'
         run: |
           git config --system core.autocrlf false
           git config --system core.eol lf
