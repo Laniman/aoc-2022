@@ -1,0 +1,7 @@
+{
+  "test": {
+    "files": {
+      "include": ["01/a.ts","01/b.ts","02/a.ts","02/b.ts","03/a.ts","03/b.ts"]
+    }
+  }
+}
