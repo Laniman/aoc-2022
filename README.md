@@ -6,13 +6,15 @@
   [solution A](./02/a.ts) | [solution B](./02/b.ts)
 - [03 - Day 3: Rucksack Reorganization](https://adventofcode.com/2022/day/3) -
   [solution A](./03/a.ts) | [solution B](./03/b.ts)
+- [04 - Day 4: Camp Cleanup](https://adventofcode.com/2022/day/4) -
+  [solution A](./04/a.ts) | [solution B](./04/b.ts)
 
 ## Running the solutions
 
 For running the code you need the [Deno runtime](https://deno.land/) installed.
 Run the code via
 
-```cmd
+```bash
 deno run --allow-read 01/a.ts
 # or
 npm run test
