@@ -1,3 +1,5 @@
+[![Check](https://github.com/Laniman/aoc-2022/actions/workflows/check.yml/badge.svg)](https://github.com/Laniman/aoc-2022/actions/workflows/check.yml)
+
 # [Advent of Code 2022](https://adventofcode.com/2022)
 
 - [01 - Day 1: Calorie Counting](https://adventofcode.com/2022/day/1) -
