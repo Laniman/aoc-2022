@@ -10,6 +10,8 @@
   [solution A](./03/a.ts) | [solution B](./03/b.ts)
 - [04 - Day 4: Camp Cleanup](https://adventofcode.com/2022/day/4) -
   [solution A](./04/a.ts) | [solution B](./04/b.ts)
+- [05 - Day 5: Supply Stacks](https://adventofcode.com/2022/day/5) -
+  [solution A](./05/a.ts) | [solution B](./05/b.ts)
 
 ## Running the solutions
 
