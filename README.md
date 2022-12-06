@@ -12,6 +12,8 @@
   [solution A](./04/a.ts) | [solution B](./04/b.ts)
 - [05 - Day 5: Supply Stacks](https://adventofcode.com/2022/day/5) -
   [solution A](./05/a.ts) | [solution B](./05/b.ts)
+- [06 - Day 6: Tuning Trouble](https://adventofcode.com/2022/day/6) -
+  [solution A](./06/a.ts) | [solution B](./06/b.ts)
 
 ## Running the solutions
 
