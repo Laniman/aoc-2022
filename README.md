@@ -14,6 +14,8 @@
   [solution A](./05/a.ts) | [solution B](./05/b.ts)
 - [06 - Day 6: Tuning Trouble](https://adventofcode.com/2022/day/6) -
   [solution A](./06/a.ts) | [solution B](./06/b.ts)
+- [07 - Day 7: No Space Left On Device](https://adventofcode.com/2022/day/7) -
+  [solution A](./07/a.ts) | [solution B](./07/b.ts)
 
 ## Running the solutions
 
