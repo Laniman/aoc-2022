@@ -1,57 +1,75 @@
 import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
 
-const getDirFromCd = (dir: { [key: string]: any }, cd: string[]) => {
-  return cd.reduce((acc, d) => {
-    return acc[d];
+type Dir = {
+  [name: string]: number | Dir;
+};
+
+const getDirFromCd = (dir: Dir, cd: string[]) => {
+  return cd.reduce((acc: Dir, d) => {
+    const next = acc[d];
+    if (typeof next === "number") {
+      throw new Error(`wrong path: ${cd}`);
+    }
+    return next;
   }, dir);
 };
 
 function solution(input: string) {
   const lines = input.split("\n");
-  const dir = {} as any;
-  const cd = [] as string[];
+  const fs = {};
+  const currentDirPath: string[] = [];
 
   lines.forEach((line) => {
     const params = line.split(" ");
-    if (line.startsWith("$ cd")) {
-      const dest = params[2];
-      if (dest === "..") {
-        cd.pop();
-      } else {
-        const d = getDirFromCd(dir, cd);
-        d[dest] = {};
-        cd.push(dest);
+
+    switch (params[0]) {
+      case "$": {
+        switch (params[1]) {
+          case "cd": {
+            const dest = params[2];
+            if (dest === "..") {
+              currentDirPath.pop();
+            } else {
+              const dir = getDirFromCd(fs, currentDirPath);
+              dir[dest] = {};
+              currentDirPath.push(dest);
+            }
+            break;
+          }
+          default:
+            break;
+        }
+        break;
       }
-    } else if (line.startsWith("$ ls")) {
-      // skip
-    } else {
-      if (params[0] === "dir") {
-        const d = getDirFromCd(dir, cd);
-        d[params[1]] = {};
-      } else {
-        const d = getDirFromCd(dir, cd);
-        d[params[1]] = Number(params[0]);
+      default: {
+        if (params[0] === "dir") {
+          const dir = getDirFromCd(fs, currentDirPath);
+          dir[params[1]] = {};
+        } else {
+          const dir = getDirFromCd(fs, currentDirPath);
+          dir[params[1]] = Number(params[0]);
+        }
       }
     }
   });
 
   const dirSizes: number[] = [];
 
-  const inner = (d: any) => {
-    if (typeof d === "number") {
-      return d;
+  const calcFileSize = (current: Dir | number) => {
+    if (typeof current === "number") {
+      return current;
     }
 
     let s = 0;
-    for (const prop in d) {
-      s += inner(d[prop]);
+    for (const name in current) {
+      s += calcFileSize(current[name]);
     }
 
     dirSizes.push(s);
     return s;
   };
 
-  const rootSize = inner(dir);
+  const rootSize = calcFileSize(fs);
 
   const totalSpace = 70_000_000;
   const updateSize = 30_000_000;
