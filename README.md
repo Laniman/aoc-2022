@@ -16,6 +16,8 @@
   [solution A](./06/a.ts) | [solution B](./06/b.ts)
 - [07 - Day 7: No Space Left On Device](https://adventofcode.com/2022/day/7) -
   [solution A](./07/a.ts) | [solution B](./07/b.ts)
+- [08 - Day 8: Treetop Tree House](https://adventofcode.com/2022/day/8) -
+  [solution A](./08/a.ts) | [solution B](./08/b.ts)
 
 ## Running the solutions
 
