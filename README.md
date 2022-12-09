@@ -18,6 +18,8 @@
   [solution A](./07/a.ts) | [solution B](./07/b.ts)
 - [08 - Day 8: Treetop Tree House](https://adventofcode.com/2022/day/8) -
   [solution A](./08/a.ts) | [solution B](./08/b.ts)
+- [09 - Day 9: Rope Bridge](https://adventofcode.com/2022/day/9) -
+  [solution A](./09/a.ts) | [solution B](./09/b.ts)
 
 ## Running the solutions
 
