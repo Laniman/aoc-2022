@@ -20,6 +20,8 @@
   [solution A](./08/a.ts) | [solution B](./08/b.ts)
 - [09 - Day 9: Rope Bridge](https://adventofcode.com/2022/day/9) -
   [solution A](./09/a.ts) | [solution B](./09/b.ts)
+- [10 - Day 10: Cathode-Ray Tube](https://adventofcode.com/2022/day/10) -
+  [solution A](./10/a.ts) | [solution B](./10/b.ts)
 
 ## Running the solutions
 
