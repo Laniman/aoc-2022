@@ -22,6 +22,8 @@
   [solution A](./09/a.ts) | [solution B](./09/b.ts)
 - [10 - Day 10: Cathode-Ray Tube](https://adventofcode.com/2022/day/10) -
   [solution A](./10/a.ts) | [solution B](./10/b.ts)
+- [11 - Day 11: Monkey in the Middle](https://adventofcode.com/2022/day/11) -
+  [solution A](./11/a.ts) | [solution B](./11/b.ts)
 
 ## Running the solutions
 
