@@ -26,6 +26,8 @@
   [solution A](./11/a.ts) | [solution B](./11/b.ts)
 - [12 - Day 12: Hill Climbing Algorithm](https://adventofcode.com/2022/day/12) -
   [solution A](./12/a.ts) | [solution B](./12/b.ts)
+- [13 - Day 13: Distress Signal](https://adventofcode.com/2022/day/13) -
+  [solution A](./13/a.ts) | [solution B](./13/b.ts)
 
 ## Running the solutions
 
