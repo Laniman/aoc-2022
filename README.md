@@ -24,6 +24,8 @@
   [solution A](./10/a.ts) | [solution B](./10/b.ts)
 - [11 - Day 11: Monkey in the Middle](https://adventofcode.com/2022/day/11) -
   [solution A](./11/a.ts) | [solution B](./11/b.ts)
+- [12 - Day 12: Hill Climbing Algorithm](https://adventofcode.com/2022/day/12) -
+  [solution A](./12/a.ts) | [solution B](./12/b.ts)
 
 ## Running the solutions
 
