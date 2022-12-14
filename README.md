@@ -28,6 +28,8 @@
   [solution A](./12/a.ts) | [solution B](./12/b.ts)
 - [13 - Day 13: Distress Signal](https://adventofcode.com/2022/day/13) -
   [solution A](./13/a.ts) | [solution B](./13/b.ts)
+- [14 - Day 14: Regolith Reservoir](https://adventofcode.com/2022/day/14) -
+  [solution A](./14/a.ts) | [solution B](./14/b.ts)
 
 ## Running the solutions
 
