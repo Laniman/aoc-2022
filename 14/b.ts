@@ -3,8 +3,8 @@ import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
 type Point = [number, number];
 type Grid = ("#" | "." | "o" | "+")[][];
 
-const printGrid = (grid: Grid) => {
-  const canvas = grid.map((line) => line.slice(400, 600).join("")).join("\n");
+const _printGrid = (grid: Grid) => {
+  const canvas = grid.map((line) => line.slice(450, 550).join("")).join("\n");
   console.log(canvas);
 };
 

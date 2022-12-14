@@ -3,7 +3,7 @@ import { assertEquals } from "https://deno.land/std@0.167.0/testing/asserts.ts";
 type Point = [number, number];
 type Grid = ("#" | "." | "o" | "+")[][];
 
-const printGrid = (grid: Grid) => {
+const _printGrid = (grid: Grid) => {
   const canvas = grid.map((line) => line.slice(400, 600).join("")).join("\n");
   console.log(canvas);
 };
@@ -87,7 +87,6 @@ function solution(input: string) {
     while (true) {
       let next = () => grid?.[sand![1] + 1]?.[sand![0]];
       if (!next()) {
-        // printGrid();
         return stable;
       } else if (next() === ".") {
         sand[1]++;
@@ -96,7 +95,6 @@ function solution(input: string) {
 
       next = () => grid?.[sand![1] + 1]?.[sand![0] - 1];
       if (!next()) {
-        // printGrid();
         return stable;
       } else if (next() === ".") {
         sand[0]--;
@@ -106,7 +104,6 @@ function solution(input: string) {
 
       next = () => grid?.[sand![1] + 1]?.[sand![0] + 1];
       if (!next()) {
-        // printGrid();
         return stable;
       } else if (next() === ".") {
         sand[0]++;
