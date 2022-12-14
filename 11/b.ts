@@ -73,7 +73,7 @@ Deno.test("example", () => {
   assertEquals(actual, expected);
 });
 
-Deno.test("puzzle input", { ignore: true }, () => {
+Deno.test("puzzle input", { ignore: false }, () => {
   const input = Deno.readTextFileSync("./11/input.txt");
   const actual = solution(input);
   const expected = 25272176808;

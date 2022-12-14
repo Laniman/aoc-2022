@@ -54,7 +54,6 @@ function solution(input: string) {
 
   let decoderKey = 1;
   flatted.forEach((item, index) => {
-    console.log(index);
     if (
       Array.isArray(item) &&
       item.length === 1 &&
