@@ -30,6 +30,8 @@
   [solution A](./13/a.ts) | [solution B](./13/b.ts)
 - [14 - Day 14: Regolith Reservoir](https://adventofcode.com/2022/day/14) -
   [solution A](./14/a.ts) | [solution B](./14/b.ts)
+- [15 - Day 15: Beacon Exclusion Zone](https://adventofcode.com/2022/day/15) -
+  [solution A](./15/a.ts) | [solution B](./15/b.ts)
 
 ## Running the solutions
 
