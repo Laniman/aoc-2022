@@ -5,35 +5,14 @@ type Point = [number, number];
 const dist = (p: Point, q: Point) =>
   [p[0] - q[0], p[1] - q[1]].map((z) => Math.abs(z)).reduce((a, b) => a + b);
 
-const getIntervals = (beacons: [Point, Point][], border: number) => {
-  const intervals: [number, number][] = [];
-  for (const [sensor, closest] of beacons) {
-    const d = dist(sensor, closest);
-    const h = Math.abs(sensor[1] - border);
-    const r = d - h;
-    if (r > 0) {
-      intervals.push([sensor[0] - r, sensor[0] + r]);
-    }
-  }
-
-  intervals.sort((a, b) => a[0] - b[0]);
-
-  let i = 0;
-  while (i < intervals.length - 1) {
-    const [_x1, x2] = intervals[i];
-    const [xx1, xx2] = intervals[i + 1];
-    if (x2 >= xx1) {
-      intervals[i][1] = Math.max(x2, xx2);
-      intervals.splice(i + 1, 1);
-      continue;
-    }
-    i++;
-  }
-
-  return intervals;
-};
-
-const calcResult = ([x, y]: Point) => x * 4_000_000 + y;
+const combinations = <T>(list: T[]) =>
+  list
+    .map((elem, index) => {
+      return list.slice(index + 1).map<[T, T]>((
+        otherElem,
+      ) => [elem, otherElem]);
+    })
+    .reduce((acc, elem) => acc.concat(elem), []);
 
 function solution(input: string, border: number) {
   const beacons = input
@@ -47,26 +26,42 @@ function solution(input: string, border: number) {
         number,
       ];
     })
-    .map(([a, b, c, d]) =>
-      [[a, b] as Point, [c, d] as Point] as [Point, Point]
-    );
+    .map(([a, b, c, d]) => [[a, b] as Point, [c, d] as Point]);
 
-  for (let i = 0; i <= border; i++) {
-    const intervals = getIntervals(beacons, i);
-    const [[start, end]] = intervals;
-    switch (intervals.length) {
-      case 1:
-        if (start > 0) {
-          return calcResult([0, i]);
+  for (const [[s1, c1], [s2, c2]] of combinations(beacons)) {
+    const d1 = dist(s1, c1) + 1;
+    const d2 = dist(s2, c2) + 1;
+    const [x1, y1] = s1;
+    const [x2, y2] = s2;
+
+    const xx1Values = [d1, -d1];
+    const xx2Values = [d2, -d2];
+    const xx3Values = [y1 - y2, y2 - y1];
+    const yy1Values = [d1, -d1];
+    const yy2Values = [d2, -d2];
+    const yy3Values = [x1 - x2, x2 - x1];
+
+    for (const xx1 of xx1Values) {
+      for (const xx2 of xx2Values) {
+        for (const xx3 of xx3Values) {
+          const xx = x1 + x2 + xx1 + xx2 + xx3;
+          for (const yy1 of yy1Values) {
+            for (const yy2 of yy2Values) {
+              for (const yy3 of yy3Values) {
+                const yy = y1 + y2 + yy1 + yy2 + yy3;
+                const p = [Math.floor(xx / 2), Math.floor(yy / 2)] as Point;
+                const inBorder = p.every((_) => 0 <= _ && _ <= border);
+                const isOutsideOfScanners = beacons.every(([s, c]) =>
+                  dist(s, p) > dist(s, c)
+                );
+                if (inBorder && isOutsideOfScanners) {
+                  return p[0] * 4_000_000 + p[1];
+                }
+              }
+            }
+          }
         }
-        if (end < border) {
-          return calcResult([0, i]);
-        }
-        continue;
-      case 2:
-        return calcResult([end + 1, i]);
-      default:
-        throw new Error("The search point must be unique");
+      }
     }
   }
 
