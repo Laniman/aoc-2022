@@ -32,6 +32,8 @@
   [solution A](./14/a.ts) | [solution B](./14/b.ts)
 - [15 - Day 15: Beacon Exclusion Zone](https://adventofcode.com/2022/day/15) -
   [solution A](./15/a.ts) | [solution B](./15/b.ts)
+- [16 - Day 16: Proboscidea Volcanium](https://adventofcode.com/2022/day/16) -
+  [solution A](./16/a.ts) | [solution B](./16/b.ts)
 
 ## Running the solutions
 
@@ -40,6 +42,8 @@ Run the code via
 
 ```bash
 deno run --allow-read 01/a.ts
+# or
+deno test 01/a.ts --allow-read
 # or
 npm run test
 # or
