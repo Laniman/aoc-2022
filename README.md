@@ -34,6 +34,8 @@
   [solution A](./15/a.ts) | [solution B](./15/b.ts)
 - [16 - Day 16: Proboscidea Volcanium](https://adventofcode.com/2022/day/16) -
   [solution A](./16/a.ts) | [solution B](./16/b.ts)
+- [17 - Day 17: Pyroclastic Flow](https://adventofcode.com/2022/day/17) -
+  [solution A](./17/a.ts) | [solution B](./17/b.ts)
 
 ## Running the solutions
 
