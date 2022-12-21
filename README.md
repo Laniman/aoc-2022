@@ -36,6 +36,8 @@
   [solution A](./16/a.ts) | [solution B](./16/b.ts)
 - [17 - Day 17: Pyroclastic Flow](https://adventofcode.com/2022/day/17) -
   [solution A](./17/a.ts) | [solution B](./17/b.ts)
+- [18 - Day 18: Boiling Boulders](https://adventofcode.com/2022/day/18) -
+  [solution A](./18/a.ts) | [solution B](./18/b.ts)
 
 ## Running the solutions
 
