@@ -42,6 +42,8 @@
   [solution A](./19/a.ts) | [solution B](./19/b.ts)
 - [20 - Day 20: Grove Positioning System](https://adventofcode.com/2022/day/20) -
   [solution A](./20/a.ts) | [solution B](./20/b.ts)
+- [21 - Day 21: Monkey Math](https://adventofcode.com/2022/day/21) -
+  [solution A](./21/a.ts) | [solution B](./21/b.ts)
 
 ## Running the solutions
 
