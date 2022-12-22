@@ -40,6 +40,8 @@
   [solution A](./18/a.ts) | [solution B](./18/b.ts)
 - [19 - Day 19: Not Enough Minerals](https://adventofcode.com/2022/day/19) -
   [solution A](./19/a.ts) | [solution B](./19/b.ts)
+- [20 - Day 20: Grove Positioning System](https://adventofcode.com/2022/day/20) -
+  [solution A](./20/a.ts) | [solution B](./20/b.ts)
 
 ## Running the solutions
 
