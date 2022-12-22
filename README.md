@@ -38,6 +38,8 @@
   [solution A](./17/a.ts) | [solution B](./17/b.ts)
 - [18 - Day 18: Boiling Boulders](https://adventofcode.com/2022/day/18) -
   [solution A](./18/a.ts) | [solution B](./18/b.ts)
+- [19 - Day 19: Not Enough Minerals](https://adventofcode.com/2022/day/19) -
+  [solution A](./19/a.ts) | [solution B](./19/b.ts)
 
 ## Running the solutions
 
