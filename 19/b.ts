@@ -18,7 +18,7 @@ const calculateGeodes = (blueprint: number[], time: number) => {
     oreBotOreCost,
     clayBotOreCost,
     obsBotOreCost,
-    geodeBotOreCost
+    geodeBotOreCost,
   );
 
   let totalGeodes = 0;
@@ -28,8 +28,8 @@ const calculateGeodes = (blueprint: number[], time: number) => {
     if (idleGeodes > totalGeodes) {
       totalGeodes = idleGeodes;
     }
-    const optimalGeodes =
-      idleGeodes + remainingTime * (Math.ceil(remainingTime - 1) / 2);
+    const optimalGeodes = idleGeodes +
+      remainingTime * (Math.ceil(remainingTime - 1) / 2);
 
     if (optimalGeodes <= totalGeodes) {
       return;
@@ -74,7 +74,7 @@ const calculateGeodes = (blueprint: number[], time: number) => {
         nextBots[i] += 1;
         const producedResources = bots.map((bot) => bot * (turns + 1));
         const nextResources = resources.map(
-          (resource, i) => resource + producedResources[i] - cost[i]
+          (resource, i) => resource + producedResources[i] - cost[i],
         ) as typeof resources;
         inner(remainingTime - turns - 1, nextResources, nextBots);
       }
